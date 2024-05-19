@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Gym</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- ========================= CSS here ========================= -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-5.0.0-beta1.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/LineIcons.2.0.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/tiny-slider.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/lindy-uikit.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/glightbox.min.css') }}" />
+</head>
+<body>
+  <!-- ========================= preloader start ========================= -->
+  
+  <!-- ========================= hero-section-wrapper-5 start ========================= -->
+  <section id="home" class="hero-section-wrapper-5">
+    <!-- ========================= header-6 start ========================= -->
+    <header class="header header-6">
+      <div class="navbar-area">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/Gym">
+              <img src="{{ url_for('static', filename='assets/img/logo/nanagym.png') }}" alt="Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent6" aria-controls="navbarSupportedContent6"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent6">
+              <ul id="nav6" class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="page-scroll" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll active" href="/aiSolutionsProviders">ejercicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="/aiAgro">Nutricion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="#about">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="/contact">Añadir Ejercicio</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- ========================= header-6 end ========================= -->
+    <!-- ========================= hero-5 start ========================= -->
+    <div class="hero-section hero-style-5 img-bg"
+      style="background-image: url('{{ url_for('static', filename='assets/img/hero/hero-5/hero-bg.svg') }}')">
+      <div class="container">
+        <!-- Search bar -->
+        <div class="row align-items-center mt-3 mb-3 justify-content-center">
+          <div class="col-lg-8">
+            <form class="d-flex">
+              <input class="form-control rounded-pill me-2" type="search" placeholder="Search what suits you"
+                aria-label="Search">
+              <button class="btn btn-outline-success rounded-pill" type="submit"><i
+                  class="lni lni-search-alt"></i></button>
+            </form>
+          </div>
+        </div>
+        <!-- End of Search bar -->
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="hero-content-wrapper text-lg-right">
+              <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Ejercicios</h2>
+              <div class="content-wrapper wow fadeInUp" data-wow-delay=".4s">
+                <p class="mb-4" style="font-size: 18px; margin-bottom: 1rem; display: inline-block;">Una muestra de todos los ejercicios para que cojan referencia de la manera correcta de hacer los ejercicios</p>
+              </div>
+              <!--PART DE NACHO (PIG)-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section gallery-style-4 bg-white">
+      <div class="container">
+        <div class="row">
+          {% for item in ejercicios_data %}
+          <div class="col-lg-4 col-md-6">
+            <div class="single-gallery wow fadeInUp" data-wow-delay=".2s">
+              <div class="image">
+                <div class="overlay"></div>
+                {% if item.logo_filename %}
+                <img src="{{ url_for('static', filename='assets/img/gallery/gallery-4/' + item.logo_filename) }}"
+                  alt="{{ item.name }}">
+                {% endif %}
+                <div class="overlay">
+                  <div class="action">
+                    <a href="{{url_for('ejercicios.ejercicio_detail', ejercicios_name = item.name)}}"> <i
+                        class="lni lni-link"></i> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="info">
+                <h5>{{ item.name }}</h5>
+                <p>{{ item.former_names }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- End Gallery Section -->
+  </section>
+  <!-- ========================= hero-section-wrapper-5 end ========================= -->
+  <!-- ========================= Footer ========================= -->
+  <footer class="footer footer-style-4">
+    <div class="container">
+      <div class="widget-wrapper">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="footer-widget wow fadeInUp" data-wow-delay=".2s">
+              <div class="logo">
+                <a href="#0"> <img src="{{ url_for('static', filename='assets/img/logo/logo.svg') }}" alt=""> </a>
+              </div>
+              <p class="desc"></p>
+              <ul class="socials">
+                <li> <a href="#0"> <i class="lni lni-facebook-filled"></i> </a> </li>
+                <li> <a href="#0"> <i class="lni lni-twitter-filled"></i> </a> </li>
+                <li> <a href="#0"> <i class="lni lni-instagram-filled"></i> </a> </li>
+                <li> <a href="#0"> <i class="lni lni-linkedin-original"></i> </a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget wow fadeInUp" data-wow-delay=".3s">
+              <h6>Quick Link</h6>
+              <ul class="links">
+                <li> <a href="#0">Home</a> </li>
+                <li> <a href="#0">About</a> </li>
+                <li> <a href="#0">Service</a> </li>
+                <li> <a href="#0">Testimonial</a> </li>
+                <li> <a href="#0">Contact</a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-widget wow fadeInUp" data-wow-delay=".4s">
+              <h6>Services</h6>
+              <ul class="links">
+                <li> <a href="#0">Web Design</a> </li>
+                <li> <a href="#0">Web Development</a> </li>
+                <li> <a href="#0">Seo Optimization</a> </li>
+                <li> <a href="#0">Blog Writing</a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="footer-widget wow fadeInUp" data-wow-delay=".5s">
+              <h6>Download App</h6>
+              <ul class="download-app">
+                <li>
+                  <a href="#0">
+                    <span class="icon"><i class="lni lni-apple"></i></span>
+                    <span class="text">Download on the <b>App Store</b> </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <span class="icon"><i class="lni lni-play-store"></i></span>
+                    <span class="text">GET IT ON <b>Play Store</b> </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ========================= End of Footer ========================= -->
+  <!-- ========================= scroll-top start ========================= -->
+  <a href="#" class="scroll-top"> <i class="lni lni-chevron-up"></i> </a>
+  <!-- ========================= scroll-top end ========================= -->
+  <!-- ========================= JavaScript here ========================= -->
+  <script src="{{ url_for('static', filename='assets/js/bootstrap-5.0.0-beta1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/contact-form.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/tiny-slider.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/img.js') }}"></script>
+</body>
+</html>
