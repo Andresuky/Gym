@@ -7,7 +7,7 @@ estudies_blueprint = Blueprint('estudies', __name__)
 
 # Configurar la conexión a la base de datos MongoDB
 client = MongoClient('localhost', 27017)
-db = client['gpai']
+db = client['gym']
 collection = db['estudies']
 
 # Ruta para mostrar todos los proveedores de soluciones de IA

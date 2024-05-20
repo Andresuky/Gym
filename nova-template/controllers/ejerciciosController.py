@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, request, jsonify
+from flask import Blueprint, render_template, redirect, url_for, request
 from pymongo import MongoClient
 import os
 from werkzeug.utils import secure_filename
@@ -14,7 +14,7 @@ collection = db['ejercicios']
 # Ruta para mostrar todos los ejercicios
 @ejercicios_blueprint.route('/ejercicios')
 def ejercicios():
-    ejercicios_data = get_ejercicios_data()  # Obtener todos los datos de ejercicios
+    ejercicios_data = get_ejercicios_data()  
     return render_template('ejercicios.html', ejercicios_data=ejercicios_data)
 
 def get_ejercicios_data():

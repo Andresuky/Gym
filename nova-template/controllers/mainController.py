@@ -11,8 +11,8 @@ def home():
 
 @main_blueprint.route('/ejercicios') 
 def ejercicios_blif():
-    ejercicios = get_ejercicios_data()
-    return render_template('ejercicios.html', ejercicios=ejercicios)
+    ejercicios_data = get_ejercicios_data()
+    return render_template('ejercicios.html', ejercicios_data=ejercicios_data)
 
 @main_blueprint.route('/aiAgro') 
 def ai_solutions_estudies():

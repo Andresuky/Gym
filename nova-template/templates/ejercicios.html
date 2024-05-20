@@ -90,33 +90,31 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery-section gallery-style-4 bg-white">
       <div class="container">
-        <div class="row">
-          {% for item in ejercicios_data %}
-          <div class="col-lg-4 col-md-6">
-            <div class="single-gallery wow fadeInUp" data-wow-delay=".2s">
-              <div class="image">
-                <div class="overlay"></div>
-                {% if item.logo_filename %}
-                <img src="{{ url_for('static', filename='assets/img/gallery/gallery-4/' + item.logo_filename) }}"
-                  alt="{{ item.name }}">
-                {% endif %}
-                <div class="overlay">
-                  <div class="action">
-                    <a href="{{url_for('ejercicios.ejercicio_detail', ejercicios_name = item.name)}}"> <i
-                        class="lni lni-link"></i> </a>
+          <div class="row">
+              {% for item in ejercicios_data %}
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-gallery wow fadeInUp" data-wow-delay=".2s">
+                      <div class="image">
+                          <div class="overlay"></div>
+                          {% if item.logo_filename %}
+                          <img src="{{ url_for('static', filename='assets/img/gallery/gallery-4/' + item.logo_filename) }}" alt="{{ item.name }}">
+                          {% endif %}
+                          <div class="overlay">
+                              <div class="action">
+                                  <a href="{{ url_for('ejercicios.ejercicio_detail', ejercicio_name=item.name) }}"> <i class="lni lni-link"></i> </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="info">
+                          <h5>{{ item.name }}</h5>
+                          <p>{{ item.descripcion }}</p>
+                      </div>
                   </div>
-                </div>
               </div>
-              <div class="info">
-                <h5>{{ item.name }}</h5>
-                <p>{{ item.former_names }}</p>
-              </div>
-            </div>
+              {% endfor %}
           </div>
-          {% endfor %}
-        </div>
       </div>
-    </section>
+  </section>
     <!-- End Gallery Section -->
   </section>
   <!-- ========================= hero-section-wrapper-5 end ========================= -->
