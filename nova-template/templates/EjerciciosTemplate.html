@@ -6,8 +6,7 @@
     <title>Gym</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Place favicon.ico in the root directory -->
-    <!-- ========================= CSS here ========================= -->
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-5.0.0-beta1.min.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/LineIcons.2.0.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/tiny-slider.css') }}"/>
@@ -16,8 +15,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/glightbox.min.css') }}" />
 </head>
 <body>
-    <!-- ========================= preloader end ========================= -->
-    <!-- ========================= hero-section-wrapper-5 start ========================= -->
     <section id="home" class="hero-section-wrapper-5">
       <!-- ========================= header-6 start ========================= -->
       <header class="header header-6">
@@ -60,8 +57,6 @@
           </div>
         </div>
       </header>
-      <!-- ========================= header-6 end ========================= -->
-      <!-- ========================= hero-5 start ========================= -->
       <div class="hero-section hero-style-5 img-bg" style="background-image: url('{{ url_for('static', filename='assets/img/hero/hero-5/hero-bg.svg') }}')">
         <div class="container">
           <!-- End of Search bar -->
@@ -87,11 +82,11 @@
                       </tr>
                       <tr>
                         <th>Duracion de ejercicio</th>
-                        <td>{{ ejercicio.duracion|int }}</td>
+                        <td>{{ ejercicio.duracion|int }} <p>minutos</p></td>
                       </tr>
                       <tr>
                         <th>Tiempo de Decanso</th>
-                        <td>{{ ejercicio.tiempo|int }}</td>
+                        <td>{{ ejercicio.tiempo|int }}<p>minutos</p></td>
                       </tr>
                     </tbody>
                   </table> 
@@ -99,7 +94,6 @@
               </div>
             </div>
             <div class="col-lg-6 colum-modified">
-              <div class="hero-image2 wow fadeInUp" data-wow-delay=".5s">
                 <!-- Aquí debes insertar tu enlace de video de YouTube -->
                 <iframe width="750" height="400" src="{{ ejercicio.youtube_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
@@ -108,10 +102,8 @@
         </div>
       </div>
     </section>
-    <!-- ========================= scroll-top start ========================= -->
+
     <a href="#" class="scroll-top"> <i class="lni lni-chevron-up"></i> </a>
-    <!-- ========================= scroll-top end ========================= -->
-    <!-- ========================= JS here ========================= -->
     <script src="{{ url_for('static', filename='assets/js/bootstrap-5.0.0-beta1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='assets/js/contact-form.js') }}"></script>
     <script src="{{ url_for('static', filename='assets/js/tiny-slider.js') }}"></script>

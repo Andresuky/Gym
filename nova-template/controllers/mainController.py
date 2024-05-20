@@ -14,11 +14,6 @@ def ejercicios_blif():
     ejercicios_data = get_ejercicios_data()
     return render_template('ejercicios.html', ejercicios_data=ejercicios_data)
 
-@main_blueprint.route('/aiAgro') 
-def ai_solutions_estudies():
-    estudies_data = get_estudies_data()
-    return render_template('aiAgro.html', estudies_data=estudies_data)
-
 @main_blueprint.route('/contact') 
 def ai_data():
     return render_template('contact.html')
@@ -27,9 +22,6 @@ def ai_data():
 def ai_gpai():
     return render_template('Gym.html')
 
-@main_blueprint.route('/aiAgro') 
-def ai_agro():
-    return render_template('aiAgro.html')
 
 
 

@@ -2680,8 +2680,6 @@ input:focus, textarea:focus, button:focus {
   border-radius: 5px; 
 }
 .single-gallery .image {
-  width: 300px;
-  height: 300px;
   overflow: hidden;
 }
 
