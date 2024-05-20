@@ -38,13 +38,13 @@
                   <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent6">
                     <ul id="nav6" class="navbar-nav ms-auto">
                       <li class="nav-item">
-                        <a class="page-scroll active" href="/">Inicio</a>
+                        <a class="page-scroll" href="/">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="page-scroll" href="/ejercicios">AI Solutions Providers</a>
+                        <a class="page-scroll" href="/ejercicios">Ejercicios</a>
                       </li>
                       <li class="nav-item">
-                        <a class="page-scroll" href="#aiAgro">AI in Agro</a>
+                        <a class="page-scroll" href="#aiAgro">Nutricion</a>
                       </li>
                       <li class="nav-item">
                         <a class="page-scroll" href="#about">Acerca de</a>
@@ -64,43 +64,34 @@
       <!-- ========================= hero-5 start ========================= -->
       <div class="hero-section hero-style-5 img-bg" style="background-image: url('{{ url_for('static', filename='assets/img/hero/hero-5/hero-bg.svg') }}')">
         <div class="container">
-          <!-- Search bar -->
-          <div class="row align-items-center mt-3 mb-3 justify-content-center">
-            <div class="col-lg-8">
-              <form class="d-flex">
-                <input class="form-control rounded-pill me-2" type="search" placeholder="Search what suits you" aria-label="Search">
-                <button class="btn btn-outline-success rounded-pill" type="submit"><i class="lni lni-search-alt"></i></button>
-              </form>
-            </div>
-          </div>
           <!-- End of Search bar -->
           <!-- Espacio para el video de YouTube -->
           <div class="row align-items-center">
             <div class="col-lg-6">
               <div class="hero-content-wrapper">
-                <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">{{ ejercicios.name }}</h2>
+                <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">{{ ejercicio.name}}</h2>
                 <div class="table-responsive">
                   <table class="table">
                     <tbody>
                       <tr>
                         <th>Nombre del ejercicio</th>
-                        <td>{{ ejercicios.name }}</td>
+                        <td>{{ ejercicio.name }}</td>
                       </tr>
                       <tr>
                         <th>Descripcion</th>
-                        <td>{{ ejercicios.descripcion }}</td>
+                        <td>{{ ejercicio.descripcion }}</td>
                       </tr>
                       <tr>
                         <th>Repeticiones</th>
-                        <td>{{ ejercicios.repeticiones|int }}</td>
+                        <td>{{ ejercicio.repeticiones|int }}</td>
                       </tr>
                       <tr>
                         <th>Duracion de ejercicio</th>
-                        <td>{{ ejercicios.duracion|int }}</td>
+                        <td>{{ ejercicio.duracion|int }}</td>
                       </tr>
                       <tr>
                         <th>Tiempo de Decanso</th>
-                        <td>{{ ejercicios.tiempo|int }}</td>
+                        <td>{{ ejercicio.tiempo|int }}</td>
                       </tr>
                     </tbody>
                   </table> 
@@ -110,7 +101,7 @@
             <div class="col-lg-6 colum-modified">
               <div class="hero-image2 wow fadeInUp" data-wow-delay=".5s">
                 <!-- Aquí debes insertar tu enlace de video de YouTube -->
-                <iframe width="750" height="400" src="{{ ejercicios.youtube_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="750" height="400" src="{{ ejercicio.youtube_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
           </div>

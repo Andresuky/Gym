@@ -26,12 +26,12 @@ def get_ejercicios_data():
 def ejercicio_detail(ejercicio_name):
     ejercicio = collection.find_one({'name': ejercicio_name})  # Obtener un ejercicio por nombre
     if ejercicio:
-        return render_template('ejercicio_detail.html', ejercicio=ejercicio)  # Renderizar la plantilla con los detalles del ejercicio
+        return render_template('EjerciciosTemplate.html', ejercicio=ejercicio)  # Renderizar la plantilla con los detalles del ejercicio
     else:
         return "Ejercicio no encontrado"
 
 # Ruta para manejar el envío de formulario para agregar un nuevo ejercicio
-@ejercicios_blueprint.route('/submit_ejercicio_form', methods=['POST'])
+@ejercicios_blueprint.route('/submit_ejercicios_form', methods=['POST'])
 def submit_ejercicio_form():
     if request.method == 'POST':
         # Obtener datos del formulario enviado
