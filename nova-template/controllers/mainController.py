@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template
 from .ejerciciosController import get_ejercicios_data
-from .estudiesController import get_estudies_data
 
 main_blueprint = Blueprint('main', __name__)
 
@@ -21,6 +20,14 @@ def ai_data():
 @main_blueprint.route('/Gym') 
 def ai_gpai():
     return render_template('Gym.html')
+
+@main_blueprint.route('/about')
+def about():
+    return render_template('about.html')
+
+@main_blueprint.route('/nutricion')
+def nutreshon():
+    return render_template('nutricion.html')
 
 
 

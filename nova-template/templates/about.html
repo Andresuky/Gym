@@ -6,7 +6,6 @@
     <title>Gym</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap-5.0.0-beta1.min.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/LineIcons.2.0.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/tiny-slider.css') }}"/>
@@ -14,9 +13,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/lindy-uikit.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/glightbox.min.css') }}" />
 </head>
-<body>
+  <body>
+    <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <section id="home" class="hero-section-wrapper-5">
-      <!-- ========================= header-6 start ========================= -->
+
       <header class="header header-6">
         <div class="navbar-area">
           <div class="container">
@@ -24,7 +39,6 @@
               <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg">
                   <a class="navbar-brand" href="/Gym">
-                    <!-- Cambiado el href para que apunte a la página principal -->
                     <img src="{{ url_for('static', filename='assets/img/logo/nanagym.png') }}" alt="Logo" />
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent6" aria-controls="navbarSupportedContent6" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,70 +58,51 @@
                         <a class="page-scroll" href="#aiAgro">Nutricion</a>
                       </li>
                       <li class="nav-item">
-                        <a class="page-scroll" href="/about">Acerca de</a>
+                        <a class="page-scroll active" href="/about">Acerca de</a>
                       </li>
                       <li class="nav-item">
                         <a class="page-scroll" href="/contact">Añadir Ejercicio</a>
                       </li>
                     </ul>
                   </div>
+                  <!-- navbar collapse -->
                 </nav>
+                <!-- navbar -->
               </div>
             </div>
+            <!-- row -->
           </div>
+          <!-- container -->
         </div>
+        <!-- navbar area -->
       </header>
       <div class="hero-section hero-style-5 img-bg" style="background-image: url('{{ url_for('static', filename='assets/img/hero/hero-5/hero-bg.svg') }}')">
         <div class="container">
-          <!-- End of Search bar -->
-          <!-- Espacio para el video de YouTube -->
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="hero-content-wrapper">
-                <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">{{ ejercicio.name}}</h2>
-                <div class="table-responsive">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <th>Nombre del ejercicio</th>
-                        <td>{{ ejercicio.name }}</td>
-                      </tr>
-                      <tr>
-                        <th>Descripcion</th>
-                        <td>{{ ejercicio.descripcion }}</td>
-                      </tr>
-                      <tr>
-                        <th>Repeticiones</th>
-                        <td>{{ ejercicio.repeticiones|int }}</td>
-                      </tr>
-                      <tr>
-                        <th>Duracion de ejercicio</th>
-                        <td>{{ ejercicio.duracion|int }} <p>minutos</p></td>
-                      </tr>
-                      <tr>
-                        <th>Tiempo de Decanso</th>
-                        <td>{{ ejercicio.tiempo|int }}<p>minutos</p></td>
-                      </tr>
-                    </tbody>
-                  </table> 
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 colum-modified">
-                <!-- Aquí debes insertar tu enlace de video de YouTube -->
-                <iframe width="750" height="400" src="{{ ejercicio.youtube_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
+          <!-- Search bar -->
+          <div class="row align-items-center mt-3 mb-3 justify-content-center">
           </div>
+          <!-- End of Search bar -->
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="hero-content-wrapper">
+                        <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">¿Tienes alguna duda?</h2>
+                        <p class="mb-30 wow fadeInUp" data-wow-delay=".12s">Haznoslo saber</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+        
 
+
+
+
+        
     <a href="#" class="scroll-top"> <i class="lni lni-chevron-up"></i> </a>
     <script src="{{ url_for('static', filename='assets/js/bootstrap-5.0.0-beta1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='assets/js/contact-form.js') }}"></script>
     <script src="{{ url_for('static', filename='assets/js/tiny-slider.js') }}"></script>
     <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
     <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
-</body>
+  </body>
 </html>
