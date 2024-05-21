@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplayButtonOutput: false,
         controls: false,
         nav: false,
-        autoplayTimeout: 3000 // Intervalo de tiempo entre cada imagen (en milisegundos)
+        autoplayTimeout: 5000 
     });
-  });
+
+});
