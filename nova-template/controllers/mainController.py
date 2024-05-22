@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template
 from .ejerciciosController import get_ejercicios_data
+from .ejerciciosController import ejercicios_blueprint
 
 main_blueprint = Blueprint('main', __name__)
 

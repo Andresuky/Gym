@@ -42,7 +42,7 @@ def submit_ejercicio_form():
         youtube_url = request.form['youtube_url']
         logo_image = request.files['logo'] if 'logo' in request.files else None
 
-            # Procesar la URL de YouTube
+        # Procesar la URL de YouTube
         if youtube_url.startswith("https://www.youtube.com/watch?v="):
             video_id = youtube_url.split('=')[-1]
             youtube_url = f"https://www.youtube.com/embed/{video_id}"
@@ -56,7 +56,6 @@ def submit_ejercicio_form():
             logo_image.save(os.path.join(target_directory, logo_filename))
         else:
             logo_filename = None
-
         # Crear el documento para insertar en la base de datos MongoDB
         ejercicio_data = {
             "name": nombre,
@@ -72,4 +71,4 @@ def submit_ejercicio_form():
         collection.insert_one(ejercicio_data)
 
         # Redirigir al usuario de vuelta a la página de ejercicios
-        return redirect(url_for('main.ejercicios'))
+        return redirect(url_for('ejercicios.ejercicios'))  # Cambio en la redirección aquí
