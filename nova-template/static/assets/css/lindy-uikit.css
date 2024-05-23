@@ -3098,3 +3098,26 @@ input:focus, textarea:focus, button:focus {
 .nutrition-card h3 {
   margin-top: 0;
 }
+
+#gym-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  font-weight: bold;
+  background: linear-gradient(45deg, #e0d363, #fdf901);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+#gym-description {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: rgb(245, 232, 158);
+  text-align: center;
+  width: 80%; 
+}
