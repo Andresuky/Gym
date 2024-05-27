@@ -14,9 +14,9 @@ def ejercicios_blif():
     ejercicios_data = get_ejercicios_data()
     return render_template('ejercicios.html', ejercicios_data=ejercicios_data)
 
-@main_blueprint.route('/contact') 
+@main_blueprint.route('/addej') 
 def ai_data():
-    return render_template('contact.html')
+    return render_template('addej.html')
 
 @main_blueprint.route('/Gym') 
 def ai_gpai():
@@ -29,8 +29,3 @@ def about():
 @main_blueprint.route('/nutricion')
 def nutreshon():
     return render_template('nutricion.html')
-
-
-
-
-
