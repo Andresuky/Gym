@@ -33,21 +33,18 @@ def ejercicio_detail(ejercicio_name):
 @ejercicios_blueprint.route('/submit_ejercicio_form', methods=['POST'])
 def submit_ejercicio_form():
     if request.method == 'POST':
-        # Obtener datos del formulario enviado
-        nombre = request.form['name']
-        descripcion = request.form['descripcion']
-        repeticiones = int(request.form['repeticiones'])
-        duracion = int(request.form['duracion'])
-        tiempo = int(request.form['tiempo'])
-        youtube_url = request.form['youtube_url']
-        logo_image = request.files['logo'] if 'logo' in request.files else None
+        nombre = request.form.get('name')
+        descripcion = request.form.get('descripcion')
+        repeticiones = int(request.form.get('repeticiones'))
+        duracion = int(request.form.get('duracion'))
+        tiempo = int(request.form.get('tiempo'))
+        youtube_url = request.form.get('youtube_url')
+        logo_image = request.files.get('logo')
 
-        # Procesar la URL de YouTube
         if youtube_url.startswith("https://www.youtube.com/watch?v="):
             video_id = youtube_url.split('=')[-1]
             youtube_url = f"https://www.youtube.com/embed/{video_id}"
 
-        # Guardar la imagen del logo si se ha proporcionado
         target_directory = 'static/assets/img/gallery/gallery-4/'
         if not os.path.exists(target_directory):
             os.makedirs(target_directory)
@@ -56,7 +53,7 @@ def submit_ejercicio_form():
             logo_image.save(os.path.join(target_directory, logo_filename))
         else:
             logo_filename = None
-        # Crear el documento para insertar en la base de datos MongoDB
+
         ejercicio_data = {
             "name": nombre,
             "descripcion": descripcion,
@@ -67,8 +64,7 @@ def submit_ejercicio_form():
             "logo_filename": logo_filename
         }
 
-        # Insertar el documento en la colección de ejercicios
+        # Asume que tienes una colección MongoDB definida como `collection`
         collection.insert_one(ejercicio_data)
 
-        # Redirigir al usuario de vuelta a la página de ejercicios
-        return redirect(url_for('ejercicios.ejercicios'))  # Cambio en la redirección aquí
+        return redirect(url_for('ejercicios.ejercicios'))
