@@ -5,7 +5,6 @@ from config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)  # Configuración de la aplicación
-
 app.register_blueprint(main_blueprint)
 app.register_blueprint(ejercicios_blueprint)
 

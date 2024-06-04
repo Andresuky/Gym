@@ -29,3 +29,15 @@ def about():
 @main_blueprint.route('/nutricion')
 def nutreshon():
     return render_template('nutricion.html')
+
+@main_blueprint.route('/mapa')
+def clases():
+    return render_template('mapa.html')
+
+@main_blueprint.route('/entrenadores')
+def entrenadores():
+    return render_template('entrenadores.html')
+
+@main_blueprint.route('/clases')
+def mapeishon():
+    return render_template('clases.html')
