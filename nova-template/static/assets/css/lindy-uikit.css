@@ -3163,3 +3163,36 @@ input:focus, textarea:focus, button:focus {
   line-height: 1.6;
   margin-bottom: 10px;
 }
+.cta3 {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(84, 146, 82, 0.5)),fixed center center; /* Verifica la ruta a la imagen */
+  background-size: cover;
+  padding: 60px 0;
+  color: white;
+}
+.dropdown13 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #f1f1f1;
+  width: 200px;
+  padding: 10px;
+  display: none;
+}
+
+.dropdown13.show {
+  display: block;
+}
+
+.dropdown13 button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown13 button:hover {
+  background-color: #45a049;
+}

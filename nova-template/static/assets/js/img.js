@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
         hideAllDropdownMenus();
       });
     });
-
     // Función para mostrar una vista previa de la imagen seleccionada
     function previewImage(event) {
       console.log('Cambio de imagen detectado');

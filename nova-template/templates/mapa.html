@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/lindy-uikit.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/glightbox.min.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css">
+
 </head>
   <body>
     <div class="preloader">
@@ -84,19 +86,36 @@
             </div>
             <!-- End of Search bar -->
                     <div class="hero-content-wrapper">
-                        <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Ubicacion del mapa</h2>
+                        <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Ubicacion de nuestro Gymnasio </h2>
                         <div class="row">
                             <div style="height: 470px;" >
                                 <div class="map-container">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d386.1175427042181!2d-5.919690056625024!3d37.1656998178636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1277028579986d%3A0xa1d1201c9c8c67a3!2sNANA-GYM!5e0!3m2!1ses!2ses!4v1717487700151!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d386.1175427042181!2d-5.919690056625024!3d37.1656998178636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1277028579986d%3A0xa1d1201c9c8c67a3!2sNANA-GYM!5e0!3m2!1ses!2ses!4v1717487700151!5m2!1ses!2ses"  allowfullscreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
-
             </div>
           </div>
       </section>
+<!--
+  aqui termina el mapa
+-->
+<section id="cta3" class="cta3">
+  <div class="aos-init aos-animate" data-aos="zoom-in">
+      <div class="text-center">
+          <h3>¿Quieres ver nuestros mejores entrenadores?</h3>
+          <p>Aqui encontraras una gran cantidad absurda de profesionales</p>
+      </div>
+      <br>
+      <div class="d-flex justify-content-center">
+      <a href="/entrenadores" class="btn btn-primary"  >Ver entrenadores</a>
+      </div>
+  </div>
+</section>
+
+
+
     <footer class="footer footer-style-4">
       <div class="container">
         <div class="widget-wrapper">
@@ -148,5 +167,9 @@
     <script src="{{ url_for('static', filename='assets/js/tiny-slider.js') }}"></script>
     <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
     <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   </body>
 </html>

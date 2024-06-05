@@ -15,11 +15,11 @@ def ejercicios_blif():
     return render_template('ejercicios.html', ejercicios_data=ejercicios_data)
 
 @main_blueprint.route('/addej') 
-def ai_data():
+def addejejej():
     return render_template('addej.html')
 
 @main_blueprint.route('/Gym') 
-def ai_gpai():
+def gym():
     return render_template('Gym.html')
 
 @main_blueprint.route('/about')
