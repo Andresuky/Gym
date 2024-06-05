@@ -77,18 +77,105 @@
       </header>
 
       <!-- ========================= hero-5 start ========================= -->
-      <div class="hero-section hero-style-5 img-bg" style="background-image: url('{{ url_for('static', filename='assets/img/hero/hero-5/hero-bg.svg') }}')">
-        <div class="container">
-          <!-- Search bar -->
-          <div class="row align-items-center mt-3 mb-3 justify-content-center">
-          </div>
-          <!-- End of Search bar -->
-        </div>
-      </div>
-
-
-      <!-- ========================= hero-5 end ========================= -->
     </section>
+      <!--aqui finaliza la ewea estatica-->
+   
+    <section id="trainers" class="trainers-section bg-light">
+      <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="trainers-background">
+                  <h3 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Aquí están nuestros mejores entrenadores con los mejores planes</h3>
+              </div>
+          </div>
+          </div>
+          
+          <div class="row  mt-5">
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-trainer wow fadeInUp" data-wow-delay=".2s">
+                      <div class="image">
+                          <img src="{{ url_for('static', filename='../static/assets/img/gallery/atrs/entrenador1.jpg') }}" alt="Trainer 1">
+                      </div>
+                      <div class="info">
+                          <h5>Jordi Wild</h5>
+                          <p>Especialista en cardio y resistencia.</p>
+                          <p>"Hago podcast sobre diligencia y el futuro de nuestros jovenes"</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-trainer wow fadeInUp" data-wow-delay=".4s">
+                      <div class="image">
+                          <img src="{{ url_for('static', filename='../static/assets/img/gallery/atrs/entredador2.jpg') }}" alt="Trainer 2">
+                      </div>
+                      <div class="info">
+                          <h5>Lucía Fernández</h5>
+                          <p>Profesional en nutrición dietética.</p>
+                          <p>"Te ayudare a superar cualquier adversidad º3º "</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-trainer wow fadeInUp" data-wow-delay=".6s">
+                      <div class="image">
+                          <img src="{{ url_for('static', filename='../static/assets/img/gallery/atrs/entrenador3.jpg') }}" alt="Trainer 3">
+                      </div>
+                      <div class="info">
+                          <h5>Sergey Kuznetsov</h5>
+                          <p>Experto en musculación y fuerza.</p>
+                          <p>"Una vez me enfrente a un oso negro y terminamos los dos tirados en el suelo "</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Sección de Métodos de Pago -->
+  <section id="payment-methods" class="payment-methods-section bg-white">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-8 text-center">
+                  <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Métodos de Pago</h2>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-payment-method wow fadeInUp" data-wow-delay=".2s">
+                      <div class="icon">
+                          <i class="lni lni-credit-cards"></i>
+                      </div>
+                      <div class="info">
+                          <h5>Tarjetas de Crédito/Débito</h5>
+                          <p>Aceptamos todas las tarjetas de crédito y débito principales.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-payment-method wow fadeInUp" data-wow-delay=".4s">
+                      <div class="icon">
+                          <i class="lni lni-paypal"></i>
+                      </div>
+                      <div class="info">
+                          <h5>PayPal</h5>
+                          <p>Paga de manera segura a través de PayPal.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="single-payment-method wow fadeInUp" data-wow-delay=".6s">
+                      <div class="icon">
+                          <i class="lni lni-bank"></i>
+                      </div>
+                      <div class="info">
+                          <h5>Transferencia Bancaria</h5>
+                          <p>Realiza pagos mediante transferencia bancaria directa.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
     <footer class="footer footer-style-4">
       <div class="container">
         <div class="widget-wrapper">
