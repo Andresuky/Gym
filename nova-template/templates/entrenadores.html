@@ -132,50 +132,64 @@
   </section>
 
   <!-- Sección de Métodos de Pago -->
-  <section id="payment-methods" class="payment-methods-section bg-white">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-lg-8 text-center">
-                  <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Métodos de Pago</h2>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-lg-4 col-md-6">
-                  <div class="single-payment-method wow fadeInUp" data-wow-delay=".2s">
-                      <div class="icon">
-                          <i class="lni lni-credit-cards"></i>
-                      </div>
-                      <div class="info">
-                          <h5>Tarjetas de Crédito/Débito</h5>
-                          <p>Aceptamos todas las tarjetas de crédito y débito principales.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                  <div class="single-payment-method wow fadeInUp" data-wow-delay=".4s">
-                      <div class="icon">
-                          <i class="lni lni-paypal"></i>
-                      </div>
-                      <div class="info">
-                          <h5>PayPal</h5>
-                          <p>Paga de manera segura a través de PayPal.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                  <div class="single-payment-method wow fadeInUp" data-wow-delay=".6s">
-                      <div class="icon">
-                          <i class="lni lni-bank"></i>
-                      </div>
-                      <div class="info">
-                          <h5>Transferencia Bancaria</h5>
-                          <p>Realiza pagos mediante transferencia bancaria directa.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
+  <section id="pricing" class="pricing-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="trainers-background2">
+            <h3 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Aquí los pagos</h3>
+        </div>
+        </div>
       </div>
+      
+      <div class="row mt-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="single-plan wow fadeInUp" data-wow-delay=".2s" style="background-image: url('{{ url_for('static', filename='../static/assets/img/gallery/atrs/pls1.jpg') }}');">
+            <a href="/pago" class="offer-link">
+              <div class="info">
+                <h5>Plan Básico Con uno de los entrenadores</h5>
+                <p>Acceso completo durante 1 mes</p>
+                <div class="price">
+                  <h2>23€</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-plan wow fadeInUp" data-wow-delay=".4s" style="background-image: url('{{ url_for('static', filename='../static/assets/img/gallery/atrs/pls2.jpg') }}');">
+            <a href="/pago" class="offer-link">
+              <div class="info">
+                <h5>Plan Estándar Clases con Jordi + Lucia</h5>
+                <p>Acceso completo durante 3 meses</p>
+                <div class="price">
+                  <h2>47€</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single-plan wow fadeInUp" data-wow-delay=".6s" style="background-image: url('{{ url_for('static', filename='../static/assets/img/gallery/atrs/pls3.jpg') }}');">
+            <a href="/pago" class="offer-link">
+              <div class="info">
+                <h5>Plan Premium todos los entrenadores</h5>
+                <p>Oferta especial (4 meses y 20 días)</p>
+                <div class="price">
+                  <h2>67€</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+  <div class="marquee-container">
+    <img class="marquee" src="../static/assets/img/clients/brands.svg" alt="Brands">
+</div>
+  
+  <!--footer-->
     <footer class="footer footer-style-4">
       <div class="container">
         <div class="widget-wrapper">

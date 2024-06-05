@@ -41,3 +41,7 @@ def entrenadores():
 @main_blueprint.route('/clases')
 def mapeishon():
     return render_template('clases.html')
+
+@main_blueprint.route('/pago')
+def pagueishon():
+    return render_template('pago.html')

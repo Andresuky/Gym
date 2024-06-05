@@ -55,6 +55,49 @@ document.addEventListener("DOMContentLoaded", function() {
         hideAllDropdownMenus();
       });
     });
+
+
+    
+    document.getElementById('payment-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      var cardNumber = document.getElementById('card-number').value;
+      var cvv = document.getElementById('cvv').value;
+      var cardholderName = document.getElementById('cardholder-name').value;
+      var securityCode = document.getElementById('security-code').value;
+  
+      if (validateCreditCard(cardNumber) && validateCVV(cvv) && validateCardholderName(cardholderName) && validateSecurityCode(securityCode)) {
+          alert('¡Formulario de pago válido!');
+  
+          // Aquí puedes realizar la acción de pago o redireccionar a otra página.
+      } else {
+          document.getElementById('error-message').innerText = 'Por favor, verifique los campos ingresados.';
+      }
+  });
+  
+  function validateCreditCard(cardNumber) {
+      // Implementa la validación del número de tarjeta de crédito (Luhn Algorithm) aquí.
+      // Retorna true si es válido, false de lo contrario.
+  }
+  
+  function validateCVV(cvv) {
+      // Implementa la validación del código CVV aquí.
+      // Retorna true si es válido, false de lo contrario.
+  }
+  
+  function validateCardholderName(name) {
+      // Implementa la validación del nombre del titular de la tarjeta aquí.
+      // Retorna true si es válido, false de lo contrario.
+  }
+  
+  function validateSecurityCode(code) {
+      // Implementa la validación del código secreto aquí.
+      // Retorna true si es válido, false de lo contrario.
+  }
+
+
+
+
     // Función para mostrar una vista previa de la imagen seleccionada
     function previewImage(event) {
       console.log('Cambio de imagen detectado');
