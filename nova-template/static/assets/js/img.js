@@ -95,9 +95,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // Retorna true si es válido, false de lo contrario.
   }
 
-
-
-
     // Función para mostrar una vista previa de la imagen seleccionada
     function previewImage(event) {
       console.log('Cambio de imagen detectado');

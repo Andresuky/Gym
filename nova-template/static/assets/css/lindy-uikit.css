@@ -3077,26 +3077,44 @@ input:focus, textarea:focus, button:focus {
 .nutrition-info {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+  background-image: url('../img/gallery/eje/sui.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 100px 0; 
+  overflow-x: auto;
 }
+
+
+.nutrition-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
 
 .nutrition-card {
-  background-color: #f8f8f8;
+  flex: 0 0 30%; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border: 1px solid #fff; 
   padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  max-width: 30%;
-  flex: 1;
-  margin-right: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.nutrition-card:last-child {
-  margin-right: 0;
+  margin-bottom: 20px; 
+  border-radius: 10px; 
+  color: #fff; 
 }
 
 .nutrition-card h3 {
-  margin-top: 0;
+  color: #fff; 
+}
+
+.nutrition-card p {
+  margin-bottom: 10px; 
+  color: #fff; 
 }
 
 #gym-name {
@@ -3363,4 +3381,136 @@ input:focus, textarea:focus, button:focus {
 
 .formespecial2 {
       border-radius: 10px;
+}
+.inicio-background {
+  background-image: url('../img/gallery/eje/plo3.jpeg'); 
+  background-size: cover; 
+  background-position: center; 
+  padding: 20px; 
+  position: relative; 
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%); 
+}
+.inicio2-background {
+  background-image: url('../img/gallery/eje/plo2.jpg'); 
+   
+  background-position: center; 
+  padding: 20px; 
+  position: relative; 
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%); 
+}
+
+.inicio-background::before,.inicio2-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1; 
+}
+
+.inicio-background h3,.inicio2-background h3{
+  position: relative;
+  z-index: 2; 
+  color: #fff; 
+  font-size: 1.75em; 
+  margin: 0; 
+  padding: 40px 0; 
+}
+.rounded-img {
+  border-radius: 15px;
+  transition: transform 0.2s;
+}
+.rounded-img:hover {
+  transform: scale(1.05);
+}
+h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+p.lead {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.testimonials-section {
+  position: relative;
+  padding: 60px 0;
+  background: url('../img/gallery/eje/konoha.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+
+.testimonials-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials-section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for testimonials */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #555;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.testimonial h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0;
+  text-align: right;
+}
+.trainers-section .schedule {
+  margin-top: 10px;
+}
+
+.trainers-section .schedule ul {
+  padding-left: 20px;
+}
+
+.trainers-section .schedule li {
+  list-style-type: disc;
+  font-size: 1rem;
+  color: #555;
 }
